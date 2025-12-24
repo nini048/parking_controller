@@ -278,6 +278,8 @@ bool isCarInParking(const String& uid) {
 void addCarToParking(const String& uid) {
   Firebase.RTDB.setBool(&fbdo, "/parkingStatus/" + uid, true);
 }
+
+
 void removeCarFromParking(const String& uid) {
   Firebase.RTDB.deleteNode(&fbdo, "/parkingStatus/" + uid);
 }
